@@ -192,6 +192,10 @@ jQuery.fn.checkTree = function(settings) {
             // Add the appropriate classes to the new checkbox image based on the old one:
             if (jQuery(this).children('.checkbox').hasClass('checked'))
                 $checkbox.addClass('checked');
+            else if (jQuery(this).children(':checkbox').attr("checked")) {
+                $checkbox.addClass('checked');
+                jQuery(this).parents("ul").siblings(":checkbox").change()
+            }
             else if (jQuery(this).children('.checkbox').hasClass('half_checked'))
                 $checkbox.addClass('half_checked');
             
