@@ -82,7 +82,7 @@ jQuery.fn.checkTree = function(settings) {
                     ;
                 }
             })
-            .hide()
+            .css("display", "none")
         .end()
         
         .each(function() {
@@ -96,9 +96,9 @@ jQuery.fn.checkTree = function(settings) {
             // Copy the label
             var $label = jQuery(this).children("label").clone();
             // Create or the image for the checkbox next to the label
-            var $checkbox = jQuery('<div class="checkbox"></div>');
+            var $checkbox = jQuery("<div class=\"checkbox\"></div>");
             // Create the image for the arrow (to expand and collapse the hidden trees)
-            var $arrow = jQuery('<div class="arrow"></div>');
+            var $arrow = jQuery("<div class=\"arrow\"></div>");
             
             // If the li has children:
             if (jQuery(this).is(":has(ul)")) {
@@ -190,14 +190,14 @@ jQuery.fn.checkTree = function(settings) {
             });
             
             // Add the appropriate classes to the new checkbox image based on the old one:
-            if (jQuery(this).children('.checkbox').hasClass('checked'))
-                $checkbox.addClass('checked');
-            else if (jQuery(this).children(':checkbox').attr("checked")) {
-                $checkbox.addClass('checked');
+            if (jQuery(this).children(".checkbox").hasClass("checked"))
+                $checkbox.addClass("checked");
+            else if (jQuery(this).children(":checkbox").attr("checked")) {
+                $checkbox.addClass("checked");
                 jQuery(this).parents("ul").siblings(":checkbox").change()
             }
-            else if (jQuery(this).children('.checkbox').hasClass('half_checked'))
-                $checkbox.addClass('half_checked');
+            else if (jQuery(this).children(".checkbox").hasClass("half_checked"))
+                $checkbox.addClass("half_checked");
             
             // Remove any existing arrows or checkboxes or labels
             jQuery(this).children(".arrow").remove();
@@ -217,10 +217,10 @@ jQuery.fn.checkTree = function(settings) {
             .click(function() {
                 var action = settings.labelAction;
                 switch(settings.labelAction) {
-                    case 'expand':
+                    case "expand":
                         jQuery(this).siblings(".arrow").click();
                         break;
-                    case 'check':
+                    case "check":
                         jQuery(this).siblings(".checkbox").click();
                         break;
                 }
