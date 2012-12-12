@@ -3,6 +3,7 @@
     Version: 0.22
     Project Website: http://static.geewax.org/checktree/
     Author: JJ Geewax <jj@geewax.org>
+    Copyright (C) 2012 JJ Geewax
     
     License:
         The CheckTree jQuery plugin is currently available for use in all personal or 
