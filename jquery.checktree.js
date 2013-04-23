@@ -142,6 +142,9 @@ jQuery.fn.checkTree = function(settings) {
             $checkbox.removeClass('checked half_checked');
             $this.prop('checked', false);
         }
+        
+        // Bubble up to our parent checkbox
+        $this.parents('ul:first').siblings(':checkbox:first').trigger('refresh');
     });
 
     /*
