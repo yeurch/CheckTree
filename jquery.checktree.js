@@ -32,7 +32,7 @@ jQuery.fn.checkTree = function(settings) {
         debug: false
     }, settings);
 
-    var $tree = jQuery("ul.tree");
+    var $tree = this;
     var $lis = $tree.find('li');
     var $checkboxes = $lis.find(":checkbox");
 
