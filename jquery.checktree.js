@@ -98,7 +98,7 @@ jQuery.fn.checkTree = function(settings) {
         ;
         
         // Send a change event to our parent checkbox:
-        $this.parents("ul:first").siblings(":checkbox:first").change();
+        $this.parents("ul:first").siblings(":checkbox:first").trigger('refresh');
         
         // Handle callbacks
         if (settings.onCheck && $this.hasClass('checked')) {
@@ -113,7 +113,7 @@ jQuery.fn.checkTree = function(settings) {
     What to do when a checkbox gets a change event
     (Fired when the children of this checkbox have changed)
     */
-    $checkboxes.change(function() {
+    $checkboxes.on('refresh', function() {
         // If all the children are checked, this should be checked:
         var $this = jQuery(this);
         var $checkbox = $this.siblings('.checkbox:first');
