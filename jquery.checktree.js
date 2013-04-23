@@ -1,8 +1,13 @@
 /**
     Project: CheckTree jQuery Plugin
-    Version: 0.3 (porkchop)
-    Project Website: http://jquery-checktree.googlecode.com/
-    Author: JJ Geewax <jj@geewax.org>
+    Version: 0.4
+    
+    Legacy Project Website (to v0.3): http://jquery-checktree.googlecode.com/
+    Author: JJ Geeway <jj@geewax.org>
+    
+    Project Website (since v0.4): https://github.com/yeurch/checktree
+    Author: Richard Fawcett <r_d_fawcett@hotmail.com>
+    Twitter: @yeurch
 
     License:
         The CheckTree jQuery plugin is currently available for use in all personal or 
