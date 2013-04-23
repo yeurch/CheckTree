@@ -6,7 +6,7 @@ and collapsable.
 
 It, like jQuery, is licensed under either the GPL or MIT license.
 
-Original project Copyright (C) 2012 JJ Geewax
+Original project Copyright (C) 2012 JJ Geewax  
 This fork Copyright (C) 2013 Richard Fawcett
 
 ##Getting Started
