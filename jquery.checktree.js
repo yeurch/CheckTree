@@ -84,17 +84,17 @@ jQuery.fn.checkTree = function(settings) {
         $this
             .toggleClass('checked')
             .removeClass('half_checked')
-            .siblings(':checkbox:first').attr('checked', $this.hasClass('checked') ? 'checked' : '')
+            .siblings(':checkbox:first').prop('checked', $this.hasClass('checked'))
         ;
         
         $this.filter('.checked').siblings('ul:first').find('.checkbox:not(.checked)')
             .removeClass('half_checked')
             .addClass('checked')
-            .siblings(':checkbox').attr('checked', 'checked')
+            .siblings(':checkbox').prop('checked', true)
         ;
         $this.filter(':not(.checked)').siblings('ul:first').find('.checkbox.checked')
             .removeClass('checked half_checked')
-            .siblings(':checkbox').attr('checked', '')
+            .siblings(':checkbox').prop('checked', false)
         ;
         
         // Send a change event to our parent checkbox:
@@ -121,7 +121,7 @@ jQuery.fn.checkTree = function(settings) {
         var any_unchecked = $this.siblings('ul:first').find(':checkbox:not(:checked):first').length == 1;
         
         if (any_checked) {
-            $this.attr('checked', 'checked');
+            $this.prop('checked', true);
             if (any_unchecked) {
                 $checkbox
                     .addClass('half_checked')
@@ -140,7 +140,7 @@ jQuery.fn.checkTree = function(settings) {
         }
         else {
             $checkbox.removeClass('checked half_checked');
-            $this.attr('checked', '');
+            $this.prop('checked', false);
         }
     });
 
@@ -181,7 +181,7 @@ jQuery.fn.checkTree = function(settings) {
     $tree.clear = function() {
         $tree.find('.checkbox')
             .removeClass('checked')
-            .siblings(':checkbox').attr('checked', '')
+            .siblings(':checkbox').prop('checked', false)
         ;
     };
 };
