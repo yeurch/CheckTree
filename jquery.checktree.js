@@ -49,9 +49,6 @@ jQuery.fn.checkTree = function(settings) {
         jQuery(this).prepend('<div class="arrow"></div><div class="checkbox"></div>');
     });
 
-    // Hide all sub-trees
-    $tree.find('li > ul').css('display', 'none');
-
     /*
     What to do when the arrow is clicked
     Tried:
@@ -78,8 +75,16 @@ jQuery.fn.checkTree = function(settings) {
                 settings.onCollapse($this.parent());
             }
         })
-        .addClass('collapsed')
+        .addClass(function(){
+            return $(this).siblings('ul.expanded').length === 1 ? 'expanded' : 'collapsed';
+        })
     ;
+    
+    // Remove the now redundant 'expanded' class from any sub-lists
+    $tree.find('ul').removeClass('expanded');
+    
+    // Hide all collapsed sub-trees
+    $tree.find('li:has(> .arrow.collapsed) > ul').css('display', 'none');
 
     /*
     What to do when the checkbox is clicked
