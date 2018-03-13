@@ -62,4 +62,5 @@ following keys are supported:
 * __onLabelHoverOver__ - a function which is called when a label is hovered over.
 * __onLabelHoverOut__ - a function which is called when a label is no longer being hovered over.
 * __labelAction__ - either 'expand' or 'check' - determines what happens when a label is clicked.
+* __displayChildren__ - either 'true' or 'false' - determines upon load if the subchildren is collapsed or expanded.
 
