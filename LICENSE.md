@@ -1,8 +1,10 @@
 The CheckTree jQuery plugin is currently available for use in all personal or commercial
 projects under _both_ MIT and GPL licenses. This means that _you_ can choose the license
-that best suits your project and use it accordingly.
+that best suits your project and use it accordingly. This applies to previous versions
+of CheckTree (v 0.3 and earlier) written by JJ Geewax as well as the later versions
+written by Richard Fawcett.
 
-CheckTree version 0.3 Copyright (c) 2012 JJ Geewax  
+CheckTree version 0.3 Copyright (c) 2012 JJ Geewax
 CheckTree later versions Copyright (c) 2013 Richard Fawcett
 
 ## The MIT License (MIT)
@@ -26,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-##The GNU General Public License (GPLv3)
+## The GNU General Public License (GPLv3)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
