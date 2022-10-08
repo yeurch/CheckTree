@@ -41,6 +41,9 @@ jQuery.fn.checkTree = function(settings) {
     var $lis = $tree.find('li');
     var $checkboxes = $lis.find(":checkbox");
 
+    //remove all divs to avoid issues if it already has created the elements
+    $tree.find('div').remove();
+
     // Hide all checkbox inputs
     $checkboxes.css('display', 'none');
 
