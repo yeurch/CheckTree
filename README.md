@@ -1,15 +1,15 @@
-##Overview
+## Overview
 
 CheckTree is a jQuery plugin, written for jQuery 1.7.0 and later, that allows you to
 easily turn a standard ordered list into a hierarchical tree that is both check-able
-and collapsable.
+and collapsible.
 
 It, like jQuery, is licensed under either the GPL or MIT license.
 
 Original project Copyright (C) 2012 JJ Geewax  
-This fork Copyright (C) 2013 Richard Fawcett
+This fork Copyright (C) 2013-2022 Richard Fawcett
 
-##Getting Started
+## Getting Started
 
 In your HTML markup, define an unordered list using the following layout:
 
@@ -49,7 +49,7 @@ A `div` with class `arrow` is prepended to each non-leaf-node checkbox. Such `di
 also adorned with either a `collapsed` or `expanded` class to indicate whether the node is
 collapsed or expanded.  These can be used to assign different background images in CSS.
 
-##Options
+## Options
 
 The `checkTree()` function optionally accepts an object variable containing options. The
 following keys are supported:

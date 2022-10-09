@@ -6,7 +6,7 @@
     Author: JJ Geeway <jj@geewax.org>
     
     Project Website (since v0.4): https://github.com/yeurch/checktree
-    Author: Richard Fawcett <r_d_fawcett@hotmail.com>
+    Author: Richard Fawcett
     Twitter: @yeurch
 
     License:
