@@ -41,12 +41,15 @@ jQuery.fn.checkTree = function(settings) {
     var $lis = $tree.find('li');
     var $checkboxes = $lis.find(":checkbox");
 
+    //remove all divs to avoid issues if it already has created the elements
+    $tree.find('div.checktree').remove();
+
     // Hide all checkbox inputs
     $checkboxes.css('display', 'none');
 
     $lis.not(':has(.arrow)').each(function() {
         // This little piece here is by far the slowest.
-        jQuery(this).prepend('<div class="arrow"></div><div class="checkbox"></div>');
+        jQuery(this).prepend('<div class="checktree arrow"></div><div class="checktree checkbox"></div>');
     });
 
     /*
