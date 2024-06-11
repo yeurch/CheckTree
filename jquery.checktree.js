@@ -208,8 +208,11 @@ jQuery.fn.checkTree = function(settings) {
         var $this = jQuery(this);
         var $checkbox = $this.siblings('.checkbox:first');
         if ($this.prop('checked')) {
-            $checkbox.click();
+            $checkbox.addClass('checked');
+        } else {
+            $checkbox.removeClass('checked');
         }
+        $checkbox.parents("ul:first").siblings(":checkbox:first").trigger('refresh');
     });
 
     // Trigger the change event for any pre-checked checkboxes on initialization
