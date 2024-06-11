@@ -81,7 +81,7 @@ jQuery.fn.checkTree = function(settings) {
         .addClass(function(){
             return $(this).siblings('ul.expanded').length === 1 ? 'expanded' : 'collapsed';
         })
-    ;
+        ;
     
     // Remove the now redundant 'expanded' class from any sub-lists
     $tree.find('ul').removeClass('expanded');
@@ -200,5 +200,19 @@ jQuery.fn.checkTree = function(settings) {
             .siblings(':checkbox').prop('checked', false)
         ;
     };
+
+    /*
+      Add checked class to elements with "checktree checkbox" when checkbox is selected
+    */
+    $checkboxes.change(function () {
+        var $this = jQuery(this);
+        var $checkbox = $this.siblings('.checkbox:first');
+        if ($this.prop('checked')) {
+            $checkbox.click();
+        }
+    });
+
+    // Trigger the change event for any pre-checked checkboxes on initialization
+    $checkboxes.filter(':checked').trigger('change');
 };
 })(jQuery);
